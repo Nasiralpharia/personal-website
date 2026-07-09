@@ -3,14 +3,15 @@ interface Props {
   era: string;
   role: string;
   org: string;
+  lessonLabel?: string;
 }
-const { era, role, org } = Astro.props;
+const { era, role, org, lessonLabel = 'What this pivot taught me:' } = Astro.props;
 ---
 <article class="entry">
   <p class="era">{era}</p>
   <h3>{role} · {org}</h3>
   <div class="body"><slot /></div>
-  <p class="lesson"><strong>What this pivot taught me:</strong> <slot name="lesson" /></p>
+  <p class="lesson"><strong>{lessonLabel}</strong> <slot name="lesson" /></p>
 </article>
 
 <style>

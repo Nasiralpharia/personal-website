@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://Nasiralpharia.github.io',
+  site: 'https://nasiralpharia.github.io',
   base: '/personal-website',
 });

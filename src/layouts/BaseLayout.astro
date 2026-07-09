@@ -31,7 +31,12 @@ const navLinks = [
         <a class="wordmark" href={url('/')}>Andre Richards</a>
         <ul>
           {navLinks.map((link) => (
-            <li><a href={link.href}>{link.label}</a></li>
+            <li>
+              <a
+                href={link.href}
+                aria-current={Astro.url.pathname.replace(/\/$/, '') === link.href.replace(/\/$/, '') ? 'page' : undefined}
+              >{link.label}</a>
+            </li>
           ))}
         </ul>
       </nav>
@@ -86,6 +91,9 @@ const navLinks = [
   .site-header ul a:focus-visible {
     color: var(--accent-strong);
     text-decoration: underline;
+  }
+  .site-header ul a[aria-current="page"] {
+    color: var(--accent-strong);
   }
   .site-footer {
     border-top: 1px solid var(--border);
