@@ -1,9 +1,107 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { url } from '../lib/url.js';
 ---
 <BaseLayout
   title="Andre Richards — Career Pivots, Powered by AI"
   description="Andre Richards helps professionals reinvent their careers with AI: job-search coaching, speaking, and 1:1 mentoring."
 >
-  <section class="band"><div class="container"><h1>Home</h1></div></section>
+  <section class="band">
+    <div class="container hero">
+      <div class="hero-text">
+        <p class="eyebrow">Career pivots, powered by AI</p>
+        <h1>I've reinvented my career three times.</h1>
+        <p class="lead">
+          Marine. Detective. Researcher. Enterprise technologist. Today I lead
+          AI enablement at a Fortune 500 financial services company — and I
+          help professionals write their own next chapter, with AI in their
+          corner.
+        </p>
+        <div class="cta-row">
+          <CTAButton href={url('/services/')}>Work with me</CTAButton>
+          <CTAButton href={url('/about/')} variant="text">My story →</CTAButton>
+        </div>
+      </div>
+      <img
+        class="headshot"
+        src={url('/headshot.jpg')}
+        alt="Andre Richards"
+        width="280"
+        height="280"
+        loading="eager"
+      />
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="container">
+      <h2>How I can help</h2>
+      <div class="cards">
+        <ServiceCard title="AI-Powered Job Search Coaching">
+          Your resume, applications, and interview prep — rebuilt with an AI
+          workflow that makes you stand out instead of blending in.
+        </ServiceCard>
+        <ServiceCard title="Speaking">
+          Story-driven talks on AI adoption and career reinvention, for
+          conferences, companies, and community groups.
+        </ServiceCard>
+        <ServiceCard title="1:1 Pivot Sessions">
+          Focused mentoring for professionals in the middle of a career change
+          who want a plan, not platitudes.
+        </ServiceCard>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container">
+      <p class="credibility">
+        PMP® · Cisco Certified AI Technical Practitioner · Cisco Generative AI
+        Blue Belt · Triangle Business Journal 40 Under 40 · 20+ years across
+        military, law enforcement, research, and enterprise tech
+      </p>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .hero-text { flex: 1 1 24rem; }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 38rem;
+  }
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .headshot {
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .credibility {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+</style>
