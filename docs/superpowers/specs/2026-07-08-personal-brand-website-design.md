@@ -62,7 +62,7 @@ allow adding a `/blog` route later without redesign.
 - **Services (`/services`)** — Detail on coaching + 1:1 sessions, each with
   "who this is for" and an email CTA. No pricing — "get in touch."
 - **Speaking (`/speaking`)** — Short + long speaker bios (copy-paste ready for
-  organizers), 3–4 talk topics with one-paragraph abstracts, headshot download
+  organizers), exactly 3 talk topics with one-paragraph abstracts, headshot download
   link, booking-inquiry email CTA. Extensible into a full speaker kit later.
 - **Contact (`/contact`)** — Email button (mailto: richards.andre@gmail.com),
   LinkedIn button (linkedin.com/in/andrekrichards), one line on what to reach
@@ -101,9 +101,11 @@ Chosen from three mocked-up directions (vs. corporate navy and dark tech).
 
 ## Deployment
 
-- **Phase 1 (now):** Public GitHub repo; official Astro GitHub Action deploys
-  to GitHub Pages on push to `main`; site at
-  `https://<username>.github.io/<repo>/` with Astro `base` configured.
+- **Phase 1 (now):** Public GitHub repo named `personal-website` (owner =
+  Andre's GitHub account, confirmed via `gh api user` at push time); official
+  Astro GitHub Action deploys to GitHub Pages on push to `main`; site at
+  `https://<owner>.github.io/personal-website/` with Astro `base` configured
+  to `/personal-website`.
   `<meta name="robots" content="noindex">` in BaseLayout keeps it unlisted;
   link shared privately.
 - **Phase 2 (go-public, documented in README):** connect repo to Vercel
