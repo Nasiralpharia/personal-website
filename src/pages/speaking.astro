@@ -1,9 +1,100 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import TalkTopic from '../components/TalkTopic.astro';
+import { url } from '../lib/url.js';
 ---
 <BaseLayout
   title="Speaking — Andre Richards"
   description="Book Andre Richards to speak on practical AI adoption and career reinvention."
 >
-  <section class="band"><div class="container"><h1>Speaking</h1></div></section>
+  <section class="band">
+    <div class="container narrow">
+      <p class="eyebrow">Speaking</p>
+      <h1>Talks that make AI feel possible.</h1>
+      <p class="lead">
+        I speak about AI adoption and career reinvention — as someone who has
+        lived both. Audiences leave with practical next steps, not hype.
+      </p>
+      <CTAButton href="mailto:richards.andre@gmail.com?subject=Speaking%20Inquiry">
+        Book me to speak
+      </CTAButton>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="container narrow">
+      <h2>Talk topics</h2>
+      <TalkTopic title="Reinvention Is a Skill: What Three Career Pivots Taught Me About Change">
+        From Marine to detective to enterprise technologist — this keynote
+        breaks down the repeatable mechanics of starting over: how to
+        translate old skills for a new field, survive the credibility gap,
+        and why career changers are precisely the people who thrive in the AI
+        era. Story-driven, funny in places, and unflinching about what the
+        middle of a pivot really feels like.
+      </TalkTopic>
+      <TalkTopic title="AI for the Rest of Us: Practical Adoption for Non-Technical Professionals">
+        Most AI talks are written for engineers. This one is for everyone
+        else. Drawing on enterprise AI enablement work with thousands of
+        professionals, it covers what AI actually does well today, the
+        workflows worth adopting first, and how to build confidence in teams
+        who fear the technology more than they understand it.
+      </TalkTopic>
+      <TalkTopic title="The AI-Powered Job Search: Standing Out When Everyone Has the Same Tools">
+        Every candidate now has access to the same AI. So why do some
+        applications get interviews while others vanish into screening
+        software? This session shows job seekers how to use AI as a
+        force multiplier for research, tailoring, and interview prep — while
+        keeping the one thing AI can't fake: a genuine story.
+      </TalkTopic>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container narrow">
+      <h2>Speaker bio</h2>
+      <p class="label-line"><strong>Short (for programs):</strong></p>
+      <p>
+        Andre Richards is an AI enablement leader at a Fortune 500 financial
+        services company who has reinvented his career three times — Marine,
+        detective, enterprise technologist. He speaks on practical AI
+        adoption and career transformation, and is based in the
+        Raleigh-Durham area of North Carolina.
+      </p>
+      <p class="label-line"><strong>Long (for introductions):</strong></p>
+      <p>
+        Andre Richards leads AI enablement at a Fortune 500 financial
+        services company, where he helps thousands of professionals work
+        confidently with AI. His path there was anything but typical: five
+        years as a Marine Corps tactical air defense operator with
+        deployments to Jordan and Afghanistan, nearly twelve years as a
+        Durham Police Department detective and supervisor working homicide
+        and special victims cases, a research career at RTI International
+        bridging academics and practitioners, and five years at Cisco guiding
+        Fortune 500 companies through technology adoption. He holds an MBA, a
+        PMP certification, and Cisco's AI Technical Practitioner and
+        Generative AI Blue Belt credentials, and was named to the Triangle
+        Business Journal's 40 Under 40. He speaks about the two things his
+        career proves: reinvention is a learnable skill, and AI is the
+        biggest lever a professional has ever had.
+      </p>
+      <p>
+        <a href={url('/headshot.jpg')} download="andre-richards-headshot.jpg">
+          Download headshot
+        </a>
+      </p>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .narrow { max-width: 46rem; }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .label-line {
+    margin-top: 1.5rem;
+    color: var(--accent-strong);
+  }
+</style>
