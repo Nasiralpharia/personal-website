@@ -1,9 +1,99 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import TimelineEntry from '../components/TimelineEntry.astro';
+import { url } from '../lib/url.js';
 ---
 <BaseLayout
   title="My Story — Andre Richards"
   description="From the Marine Corps to AI enablement: the three career pivots behind Andre Richards' approach to reinvention."
 >
-  <section class="band"><div class="container"><h1>My story</h1></div></section>
+  <section class="band">
+    <div class="container narrow">
+      <p class="eyebrow">My story</p>
+      <h1>Reinvention isn't luck. It's a skill.</h1>
+      <p class="lead">
+        I've started over three times — each time walking away from an
+        identity I'd worked years to build. Here's the path, and what each
+        pivot taught me about change.
+      </p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container narrow">
+      <TimelineEntry era="2000 – 2005" role="Tactical Air Defense Operator" org="United States Marine Corps">
+        Five years in uniform, with deployments to Jordan and Afghanistan. The
+        Marines took a teenager and taught him standards, discipline, and how
+        to perform when the stakes are real.
+        <Fragment slot="lesson">
+          Discipline beats motivation. Systems beat willpower. You don't rise
+          to the occasion — you fall to the level of your training.
+        </Fragment>
+      </TimelineEntry>
+
+      <TimelineEntry era="2006 – 2018" role="Detective & Supervisor" org="Durham Police Department">
+        Nearly twelve years investigating the hardest cases a city produces —
+        homicide, property crimes, and the Special Victims Unit — and leading
+        the people who worked them.
+        <Fragment slot="lesson">
+          Every complex problem is a people problem first. Listening under
+          pressure is a superpower, and trust is built in small, consistent
+          acts.
+        </Fragment>
+      </TimelineEntry>
+
+      <TimelineEntry era="2018 – 2021" role="Research Analyst" org="RTI International">
+        I crossed from the street to the research world, translating between
+        academics studying policing and the officers living it — and advising
+        software teams building tools for law enforcement.
+        <Fragment slot="lesson">
+          The person who can translate between two worlds is more valuable
+          than an expert in either. That's what a career changer actually is.
+        </Fragment>
+      </TimelineEntry>
+
+      <TimelineEntry era="2021 – 2026" role="Customer Success Manager" org="Cisco">
+        Enterprise tech, from a standing start. I guided Fortune 500 companies
+        through technology adoption, earned Cisco's AI Technical Practitioner
+        certification and Generative AI Blue Belt, and discovered the pattern
+        behind every successful transformation.
+        <Fragment slot="lesson">
+          Adoption is never a technology problem. It's a confidence problem —
+          and confidence can be coached.
+        </Fragment>
+      </TimelineEntry>
+
+      <TimelineEntry era="Today" role="AI Enablement Leader" org="Fortune 500 Financial Services">
+        I now lead AI enablement at a Fortune 500 financial services company,
+        helping thousands of professionals work confidently with AI.
+        <Fragment slot="lesson">
+          The biggest career lever of our generation is sitting in a browser
+          tab. Most people just need someone to show them how to pull it.
+        </Fragment>
+      </TimelineEntry>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="container narrow">
+      <h2>The thesis</h2>
+      <p>
+        Reinvention is a repeatable skill — I've done it from the military to
+        policing, policing to research, research to enterprise tech. And AI is
+        the biggest lever a career changer has ever had. If you're standing at
+        the edge of your own pivot, you don't need more courage. You need a
+        blueprint.
+      </p>
+      <CTAButton href={url('/services/')}>Work with me</CTAButton>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .narrow { max-width: 46rem; }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+</style>

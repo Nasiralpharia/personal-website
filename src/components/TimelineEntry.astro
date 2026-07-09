@@ -1,0 +1,46 @@
+---
+interface Props {
+  era: string;
+  role: string;
+  org: string;
+}
+const { era, role, org } = Astro.props;
+---
+<article class="entry">
+  <p class="era">{era}</p>
+  <h3>{role} · {org}</h3>
+  <div class="body"><slot /></div>
+  <p class="lesson"><strong>What this pivot taught me:</strong> <slot name="lesson" /></p>
+</article>
+
+<style>
+  .entry {
+    border-left: 2px solid var(--accent);
+    padding: 0 0 2.5rem 1.5rem;
+    position: relative;
+  }
+  .entry::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0.35rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .era {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    margin-bottom: 0.25rem;
+  }
+  .entry h3 { margin-bottom: 0.5rem; }
+  .body { color: var(--text-muted); }
+  .lesson {
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+  }
+</style>
