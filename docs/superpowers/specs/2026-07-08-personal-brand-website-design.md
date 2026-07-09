@@ -20,10 +20,13 @@ complete but require zero maintenance until then.
   coaching product; the word "blueprint" may appear in copy but is not used as
   a product name.
 - **Core narrative (central to the brand):** Andre has reinvented his career
-  three times — Marine (2000–2005, tactical air defense, Afghanistan) →
-  Durham PD detective/supervisor (2006–2018, homicide/SVU) → RTI International
-  research analyst (2018–2021) → Cisco enterprise customer success (2021–2026,
-  AI certifications) → AI enablement leader. He now helps others engineer
+  three times — Marine (2000–2005, tactical air defense; deployments to
+  Jordan 2002–2003 and Afghanistan 2004) → Durham PD detective/supervisor
+  (2006–2018, homicide/property crimes/SVU) → RTI International research
+  analyst (2018–2021) → Cisco enterprise customer success (2021–2026, AI
+  certifications) → AI enablement leader. Based in the Raleigh-Durham area,
+  North Carolina. (Source of biographical facts: Andre's LinkedIn profile
+  export, `Profile.pdf` in the project root, untracked.) He now helps others engineer
   career pivots using AI.
 - **Employer handling (conflict-of-interest guardrails):**
   - Current employer is NEVER named. Described only as "AI enablement leader
@@ -33,9 +36,10 @@ complete but require zero maintenance until then.
   - Footer disclaimer on every page: "All views and services are my own and
     unaffiliated with my employer."
   - No content sells to, references, or competes with the employer's business.
-- **Credibility markers:** PMP, Cisco Certified AI Technical Practitioner,
-  Cisco Generative AI Blue Belt, Triangle Business Journal 40 Under 40,
-  20+ years across military / law enforcement / research / enterprise tech.
+- **Credibility markers:** MBA (Liberty University), PMP, Cisco Certified AI
+  Technical Practitioner, Cisco Generative AI Blue Belt, Triangle Business
+  Journal 40 Under 40, 20+ years across military / law enforcement /
+  research / enterprise tech.
 
 ## Offerings (launch scope)
 
@@ -84,7 +88,9 @@ Chosen from three mocked-up directions (vs. corporate navy and dark tech).
 - **Accessibility:** semantic HTML, alt text, keyboard-navigable collapsed
   mobile nav, `prefers-reduced-motion` respected; animations minimal (subtle
   fade-ins at most).
-- **Responsive:** mobile-first; nav collapses to simple menu on phones.
+- **Responsive:** mobile-first; the nav wraps to a second line on phones
+  (accepted deviation from an earlier "collapse to menu" idea — wrapping
+  keeps the site zero-JS and works cleanly at 375px).
 
 ## Architecture & Tech
 
