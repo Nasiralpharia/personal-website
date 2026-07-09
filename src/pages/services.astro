@@ -1,9 +1,99 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
 ---
 <BaseLayout
   title="Services — Andre Richards"
   description="AI-powered job search coaching and 1:1 pivot sessions with Andre Richards."
 >
-  <section class="band"><div class="container"><h1>Services</h1></div></section>
+  <section class="band">
+    <div class="container narrow">
+      <p class="eyebrow">Services</p>
+      <h1>Work with me</h1>
+      <p class="lead">
+        Two ways to get help — both built on the same idea: AI won't replace
+        you, but a candidate who uses it well will outcompete one who doesn't.
+      </p>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="container narrow">
+      <h2>AI-Powered Job Search Coaching</h2>
+      <p>
+        This is not a resume-writing service. It's a rebuild of how you run
+        your search:
+      </p>
+      <ul>
+        <li>
+          <strong>Resume overhaul with an AI workflow</strong> — we rework
+          your resume together and set up a repeatable process for tailoring
+          it to every posting in minutes, not hours.
+        </li>
+        <li>
+          <strong>Application strategy</strong> — where to aim, how to get
+          past automated screening, and how to make an unusual background read
+          as an asset.
+        </li>
+        <li>
+          <strong>Interview preparation</strong> — using AI to rehearse
+          smarter, anticipate questions, and tell your story with confidence.
+        </li>
+      </ul>
+      <p class="who">
+        <strong>Who this is for:</strong> job seekers and career changers who
+        suspect their materials are getting filtered out before a human ever
+        reads them.
+      </p>
+      <CTAButton href="mailto:richards.andre@gmail.com?subject=Job%20Search%20Coaching">
+        Get in touch
+      </CTAButton>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container narrow">
+      <h2>1:1 Pivot Sessions</h2>
+      <p>
+        Focused mentoring for professionals in the middle of a career change.
+        I've pivoted from the military to policing, policing to research,
+        research to enterprise tech — I know what the middle of the jump feels
+        like. We'll turn "I want out" into a concrete plan: the skills story
+        you'll tell, the bridge roles worth taking, and how to use AI to close
+        gaps fast.
+      </p>
+      <p class="who">
+        <strong>Who this is for:</strong> anyone standing at the edge of a
+        pivot who wants a plan, not platitudes.
+      </p>
+      <CTAButton href="mailto:richards.andre@gmail.com?subject=1%3A1%20Pivot%20Session">
+        Get in touch
+      </CTAButton>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="container narrow">
+      <p class="note">
+        Pricing and scheduling are coming soon — for now, email me and tell me
+        where you're stuck. I read everything.
+      </p>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .narrow { max-width: 46rem; }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.75rem; }
+  .who { margin: 1.25rem 0 1.5rem; }
+  .note {
+    margin: 0;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+</style>
