@@ -1,9 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
 ---
 <BaseLayout
   title="Contact — Andre Richards"
   description="Get in touch with Andre Richards about coaching, speaking, or AI."
 >
-  <section class="band"><div class="container"><h1>Contact</h1></div></section>
+  <section class="band">
+    <div class="container narrow">
+      <p class="eyebrow">Contact</p>
+      <h1>Let's talk.</h1>
+      <p class="lead">
+        Coaching inquiries, speaking requests, or just comparing notes on
+        where AI is taking our careers — my inbox is open.
+      </p>
+      <div class="cta-row">
+        <CTAButton href="mailto:richards.andre@gmail.com">Email me</CTAButton>
+        <CTAButton href="https://www.linkedin.com/in/andrekrichards" variant="text">
+          Connect on LinkedIn →
+        </CTAButton>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .narrow { max-width: 46rem; }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+</style>
